@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Configure CocoaLumberjack
+    
+    // Initialize File Logger
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    
+    // Configure File Logger
+    [fileLogger setMaximumFileSize:(1024 * 1024)];
+    [fileLogger setRollingFrequency:(3600.0 * 24.0)];
+    [[fileLogger logFileManager] setMaximumNumberOfLogFiles:7];
+    [DDLog addLogger:fileLogger];
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
+    //show log file location, not necessary
+    DDLogFileInfo *ts =[fileLogger currentLogFileInfo];
+    LALogInfo(@"didFinishLaunchingWithOptions!");
+    LALogInfo(@"log file:%@", ts);
+    
+    // Enable Colors
+    setenv("XcodeColors", "YES", 0);
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    
+    LALogError(@"This is an error.");   //错误信息
+    LALogWarn(@"This is a warning.");//警告信息
+    LALogInfo(@"This is just a message.");//通知信息
+    LALogVerbose(@"This is a verbose message."); //详细信息
+    
     return YES;
 }
 
