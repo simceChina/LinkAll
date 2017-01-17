@@ -1,4 +1,6 @@
 platform:ios, '8.0' 
 target "LinkAll" do
-    pod 'CocoaLumberjack', '~> 3.0.0'
+    #pod 'CocoaLumberjack', '~> 3.0.0'
+    use_frameworks!
+    pod 'XMPPFramework', :git => "https://github.com/robbiehanson/XMPPFramework.git", :branch => 'master'
 end

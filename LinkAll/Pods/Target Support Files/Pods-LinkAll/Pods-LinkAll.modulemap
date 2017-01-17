@@ -1,0 +1,6 @@
+framework module Pods_LinkAll {
+  umbrella header "Pods-LinkAll-umbrella.h"
+
+  export *
+  module * { export * }
+}

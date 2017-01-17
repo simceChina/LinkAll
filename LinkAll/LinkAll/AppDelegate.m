@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XMPPFramework.h"
 
 
 @interface AppDelegate ()
@@ -44,6 +45,13 @@
     LALogWarn(@"This is a warning.");//警告信息
     LALogInfo(@"This is just a message.");//通知信息
     LALogVerbose(@"This is a verbose message."); //详细信息
+    
+    
+    //1.初始化xmppStream，登录和注册的时候都会用到它
+    XMPPStream *xmppStream = [[XMPPStream alloc]init];     //设置服务器地址,这里用的是本地地址（可换成公司具体地址）
+    xmppStream.hostName = @"127.0.0.1";//    设置端口号
+    xmppStream.hostPort = 5222;//    设置代理
+    [xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
     
     return YES;
 }

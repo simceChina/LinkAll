@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F3E51A191195180EF096624 /* libPods-LinkAll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3BE1B8FFB3449BD3AB13E0 /* libPods-LinkAll.a */; };
 		3426D7F31E2CE50400AF318A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426D7F21E2CE50400AF318A /* main.m */; };
 		3426D7F61E2CE50400AF318A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426D7F51E2CE50400AF318A /* AppDelegate.m */; };
 		3426D7F91E2CE50400AF318A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426D7F81E2CE50400AF318A /* FirstViewController.m */; };
@@ -16,10 +15,10 @@
 		3426D8011E2CE50400AF318A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3426D8001E2CE50400AF318A /* Assets.xcassets */; };
 		3426D8041E2CE50400AF318A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3426D8021E2CE50400AF318A /* LaunchScreen.storyboard */; };
 		3426D80D1E2CE9FB00AF318A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426D80C1E2CE9FB00AF318A /* Constants.m */; };
+		C2603511BFC8210813570C2B /* Pods_LinkAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD707243C37F33CD7BA0FEB9 /* Pods_LinkAll.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E3BE1B8FFB3449BD3AB13E0 /* libPods-LinkAll.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkAll.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3426D7EE1E2CE50300AF318A /* LinkAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3426D7F21E2CE50400AF318A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3426D7F41E2CE50400AF318A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		3426D80C1E2CE9FB00AF318A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3426D80E1E2CEA4D00AF318A /* LinkAll.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkAll.pch; sourceTree = "<group>"; };
 		4356F967CBF80FE2E4F346BB /* Pods-LinkAll.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkAll.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkAll/Pods-LinkAll.release.xcconfig"; sourceTree = "<group>"; };
+		DD707243C37F33CD7BA0FEB9 /* Pods_LinkAll.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LinkAll.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD13115C396F01BBF7A2A70A /* Pods-LinkAll.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkAll.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinkAll/Pods-LinkAll.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F3E51A191195180EF096624 /* libPods-LinkAll.a in Frameworks */,
+				C2603511BFC8210813570C2B /* Pods_LinkAll.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +110,7 @@
 		E393F52ECF2DCA63DC1A8469 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E3BE1B8FFB3449BD3AB13E0 /* libPods-LinkAll.a */,
+				DD707243C37F33CD7BA0FEB9 /* Pods_LinkAll.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

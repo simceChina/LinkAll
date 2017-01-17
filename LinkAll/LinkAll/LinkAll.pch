@@ -9,17 +9,8 @@
 #ifndef LinkAll_pch
 #define LinkAll_pch
 
-#define DD_LEGACY_MACROS 0
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
-#import "Constants.h"
-#import "DDLog.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
+//#define DD_LEGACY_MACROS 1
 
-#endif
 
 #define __FILENAME__ (strrchr(__FILE__, '/') ? (strrchr(__FILE__, '/') + 1):__FILE__)
 
@@ -28,6 +19,18 @@
 #define LALogInfo(format, ...)      DDLogInfo((@"[%s:" "%d]" format), __FILENAME__, __LINE__, ##__VA_ARGS__);
 #define LALogDebug(format, ...)     DDLogDebug((@"[%s:" "%d]" format), __FILENAME__, __LINE__, ##__VA_ARGS__);
 #define LALogVerbose(format, ...)   DDLogVerbose((@"[%s:" "%d]" format), __FILENAME__, __LINE__, ##__VA_ARGS__);
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "CocoaLumberjack.h"
+#import "DDLegacyMacros.h"
+#import "DDTTYLogger.h"
+#import "DDLog.h"
+#import "Constants.h"
+#endif
+
 //#define LALogError(format, ...) DDLogError((@"[file:%s]" "[%s]" "[%d]" format), __FILENAME__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
 
 #endif /* LinkAll_pch */
